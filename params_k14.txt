@@ -1,0 +1,94 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% XBeach parameter settings input file -- INPUT_K14 ---        	         %%%
+%%%                                                                          %%%
+%%% date:     27.July.2018		                                             %%%
+%%% function: xb_write_params                                                %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Bed composition parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+D15			 = 0.0002
+D50          = 0.0003
+D90          = 0.0006
+
+%%% Flow boundary condition parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+front        = abs_2d
+back         = abs_2d
+epsi         = -1
+
+%%% Flow parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+bedfriction = manning
+bedfricfile = manning_R.dep
+
+%%% Grid parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+posdwn       = -1
+gridform	 = delft3d
+xyfile  	 = GRID_deref.grd
+depfile 	 = Bed_depth_R.dep
+thetamin     = 0
+thetamax     = 180
+dtheta       = 10
+thetanaut    = 1
+
+%%% MPI parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+mpiboundary  = x
+
+%%% Physical Processes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+swrunup 	 = 1
+break		 = roelvink_daly
+gamma 		 = 0.56
+gamma2		 = 0.3
+alpha		 = 1.4
+
+%%% Model time %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+tstop        = 345600
+CFL          = 0.700000
+
+%%% Morphology parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+morfac       = 10
+morstart     = 0
+struct       = 1
+ne_layer     = NE_R.dep
+
+%%% Sediment transport parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+facua        = 1.0
+
+%%% Tide boundary conditions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+zs0file      = tide1485.txt
+tideloc      = 1
+
+%%% Wave boundary condition parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+wbctype       = parametric
+wavemodel	  = surfbeat 
+
+%%% Wave-spectrum boundary condition parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+bcfile        = loclist.txt
+
+%%% Output variables %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+outputformat = netcdf
+tintm        = 3600
+tintg        = 1800
+tstart       = 0
+
+
+nglobalvar   = 9
+zb
+zs
+H
+ue
+ve
+sedero
+hh
+dzbdx
+Qb
+
+
+nmeanvar     = 7
+zb
+zs
+H
+vmag
+sedero
+hh
+Qb
