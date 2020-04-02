@@ -1,11 +1,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% XBeach parameter settings input file -- INPUT_K14 ---                    %%%
+%%% XBeach parameter settings input file -- INPUT_Modern ---                 %%%
 %%%                                                                          %%%
 %%% date:     27.July.2018		                                             %%%
 %%% function: xb_write_params                                                %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% Bed composition parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 D15			 = 0.0002
 D50          = 0.0003
 D90          = 0.0006
@@ -35,7 +36,7 @@ mpiboundary  = x
 %%% Physical Processes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 swrunup 	 = 1
 break		 = roelvink_daly
-gamma		 = 0.56
+gamma 		 = 0.56
 gamma2		 = 0.3
 alpha		 = 1.4
 
@@ -53,7 +54,7 @@ ne_layer     = NE_R.dep
 facua        = 1.0
 
 %%% Tide boundary conditions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-zs0file      = tidek1485.txt
+zs0file      = tide.txt
 tideloc      = 1
 
 %%% Wave boundary condition parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -83,10 +84,11 @@ dzbdx
 Qb
 
 
-nmeanvar     = 6
+nmeanvar     = 7
 zb
 zs
 H
 vmag
 sedero
 hh
+Qb
